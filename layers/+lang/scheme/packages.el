@@ -18,6 +18,13 @@
     :commands run-geiser
     :config
     (progn
+      (spacemacs/declare-prefix-for-mode 'scheme-mode "mc" "compiling")
+      (spacemacs/declare-prefix-for-mode 'scheme-mode "mg" "navigation")
+      (spacemacs/declare-prefix-for-mode 'scheme-mode "mh" "documentation")
+      (spacemacs/declare-prefix-for-mode 'scheme-mode "mi" "insertion")
+      (spacemacs/declare-prefix-for-mode 'scheme-mode "mm" "macroexpansion")
+      (spacemacs/declare-prefix-for-mode 'scheme-mode "ms" "repl")
+
       (evil-leader/set-key-for-mode 'scheme-mode
         "mcc" 'geiser-compile-current-buffer
         "mcp" 'geiser-add-to-load-path
